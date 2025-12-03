@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>কিশোরকন্ঠ মেধাবৃত্তি পরীক্ষা ২০২৫ - রাজশাহী জেলা পশ্চিম</title>
+    <link rel="icon" type="image/jpg" href="https://readingcompetition.kishorkanthabd.com/assets/img/logo_2.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="py-8 px-4">
+    <div class="max-w-4xl mx-auto">
+        <div class="print-header">
+            <div class="flex justify-center items-center mb-2">
+                <img src="https://readingcompetition.kishorkanthabd.com/assets/img/logo_2.jpg" alt="কিশোরকন্ঠ লোগো" class="print-logo mr-4">
+                <div>
+                    <h1 class="text-2xl font-bold mb-2">কিশোরকন্ঠ ফাউন্ডেশন</h1>
+                    <h2 class="text-xl font-semibold mb-2">কিশোরকন্ঠ মেধাবৃত্তি পরীক্ষা ২০২৫</h2>
+                    <p class="text-lg">📍 রাজশাহী জেলা পশ্চিম</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="alert-container"></div>
+
+        <header class="header-bg text-white rounded-2xl p-6 mb-8 text-center no-print relative">
+            <div class="header-content">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczMS9bf_KgtoT05b0r3H32granUxgyyZ-g8Mb5WKhn5QptiVn5tEJBPHNtgr92W73gLViMoofIHYvtogQcL7av2RpAb8PdhIIinnHyq84iErGd5TDKNk1J-A7ffy7Q2q8IB_2bXi0ifgmrULxZi6g_k=w500-h499-s-no-gm?authuser=0" alt="কিশোরকন্ঠ লোগো" class="header-logo">
+                <div class="header-text">
+                    <h1 class="text-3xl md:text-4xl font-bold mb-2">কিশোরকন্ঠ ফাউন্ডেশন</h1>
+                    <h2 class="text-xl md:text-2xl font-semibold mb-4">কিশোরকন্ঠ মেধাবৃত্তি পরীক্ষা ২০২৫</h2>
+                    <p class="text-lg md:text-xl">📍 রাজশাহী জেলা পশ্চিম</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="card p-6 mb-8 no-print">
+            <h3 class="text-2xl font-bold text-center text-gray-800 mb-6">পরীক্ষার ফলাফল</h3>
+            
+            <div class="grid grid-cols-1 gap-6 mb-6">
+                <div>
+                    <label for="registration" class="block text-gray-700 font-medium mb-2">বৃত্তি রোল নম্বর</label>
+                    <input type="text" id="registration" placeholder="শুধুমাত্র সংখ্যা লিখুন" class="input-field">
+                    <p class="text-xs text-gray-500 mt-1">বৃত্তি রোল নম্বর বসান</p>
+                </div>
+            </div>
+            
+            <button id="search-btn" class="btn-primary w-full py-3 text-lg font-semibold">
+                ফলাফল দেখুন
+            </button>
+        </div>
+
+        <div id="results-section" class="hidden">
+            <div id="printable-section" class="result-card mb-6">
+                <div class="congratulations-container">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-2" id="congrats-title">অভিনন্দন!</h2>
+                    <p class="text-lg md:text-xl" id="congrats-message-1">আপনি কিশোরকন্ঠ মেধাবৃত্তি পরীক্ষায় অংশগ্রহণ করেছেন</p>
+                    <p class="text-lg md:text-xl" id="congrats-message-2">আপনার ফলাফল নিচে দেখানো হলো</p>
+                </div>
+                
+                <div class="student-details-grid mb-6">
+                    <div class="info-box1">
+                        <h3>ছাত্র/ছাত্রীর তথ্য</h3>
+                        <div class="space-y-4">
+                            <div class="info-item">
+                                <span class="info-label">বৃত্তি রোল নম্বর:</span>
+                                <span class="info-value" id="reg-number">-</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="marks-container mb-6">
+                    <div class="marks-box">
+                        <h3>প্রাপ্ত নম্বর</h3>
+                        <p id="obtained-marks" class="marks-value">-</p>
+                    </div>
+                </div>
+                
+                <div class="text-center no-print">
+                    <button id="print-btn" class="font-bold py-2 px-6 rounded-lg transition"
+        style="background-color: #9333EA; color: #ffffff;"
+        onmouseover="this.style.backgroundColor='#7e22ce'"
+        onmouseout="this.style.backgroundColor='#9333EA'">
+                        ফলাফল ডাউনলোড করুন
+                    </button>
+                </div>
+            </div>
+            
+            <div class="print-footer">
+                <p class="mb-2">এই সার্টিফিকেটটি কম্পিউটার দ্বারা জেনারেটেড হয়েছে</p>
+                <p>© ২০২৫ কিশোরকন্ঠ ফাউন্ডেশন - রাজশাহী জেলা পশ্চিম</p>
+            </div>
+            
+            <div class="card p-6 no-print">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">মেধাবৃত্তি সম্পর্কিত তথ্য</h3>
+                <div class="space-y-3 text-gray-700">
+                    <p>• মেধাবৃত্তি পুরস্কার প্রাপ্ত শিক্ষার্থীদের নাম পরবর্তী বিজ্ঞপ্তির মাধ্যমে প্রকাশ করা হবে।</p>
+                    <p>• ফলাফল সম্পর্কিত কোন অভিযোগ থাকলে আমাদের সাথে যোগাযোগ করুন।</p>
+                    <p>• মেধাবৃত্তি পুরস্কার বিতরণী অনুষ্ঠানের তারিখ ও স্থান পরবর্তীতে জানানো হবে।</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="error-message" class="hidden bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-6 rounded no-print">
+            <p class="font-medium" id="error-text">দুঃখিত, প্রদত্ত তথ্যের সাথে মিলে এমন কোন ফলাফল পাওয়া যায়নি। দয়া করে আবার চেষ্টা করুন।</p>
+        </div>
+ 
+        <footer class="mt-12 text-center text-gray-600 no-print">
+            <p class="font-semibold mb-2">কিশোরকন্ঠ ফাউন্ডেশন</p>
+            <p class="text-sm mb-4">কিশোরকণ্ঠ পড়বো জীবনটাকে গড়বো</p>
+            <div class="flex justify-center space-x-4">
+                <a href="https://www.facebook.com/KKFoundationRDW/" class="text-blue-600 hover:text-blue-800 transition">ফেসবুক</a>
+                <a href="https://readingcompetition.kishorkanthabd.com/about-us" class="text-blue-600 hover:text-blue-800 transition">আমাদের সম্পর্কে</a>
+                <a href="https://www.youtube.com/@kishorkanthabd" class="text-blue-600 hover:text-blue-800 transition">ইউটিউব</a>
+            </div>
+            <p class="text-xs mt-4 opacity-70">© ২০২৫ কিশোরকন্ঠ ফাউন্ডেশন - রাজশাহী জেলা পশ্চিম। সকল অধিকার সংরক্ষিত।</p>
+            <p class="text-xs mt-2 opacity-100">এই সিস্টেমটি ডেভেলপ করেছেন আইটি বিভাগ - গোদাগাড়ী পশ্চিম সাংগঠনিক থানা শাখা</p>
+        </footer>
+    </div>
+
+    <div id="print-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 class="text-2xl font-bold text-center mb-4">ফলাফল প্রিভিউ</h2>
+            <div id="preview-container" class="mb-4">
+                <p>প্রিভিউ তৈরি হচ্ছে...</p>
+            </div>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mt-4">
+                <button id="download-btn" class="btn-primary">ডাউনলোড করুন</button>
+                <button id="print-direct-btn" class="bg-green-600 text-white font-bold py-2 px-4 rounded-lg">সরাসরি প্রিন্ট</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="print-capture-container" class="print-capture-container" style="display: none;">
+        <div class="print-capture-header">
+            <div class="flex justify-center items-center mb-2">
+                <img src="https://readingcompetition.kishorkanthabd.com/assets/img/logo_2.jpg" alt="কিশোরকন্ঠ লোগো" class="print-logo mr-4">
+                <div>
+                    <h1 class="text-2xl font-bold mb-2">কিশোরকন্ঠ ফাউন্ডেশন</h1>
+                    <h2 class="text-xl font-semibold mb-2">কিশোরকন্ঠ মেধাবৃত্তি পরীক্ষা ২০২৫</h2>
+                    <p class="text-lg">📍 রাজশাহী জেলা পশ্চিম</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="capture-content">
+        </div>
+        
+        <div class="print-capture-footer">
+            <p class="mb-2">এই সার্টিফিকেটটি কম্পিউটার দ্বারা জেনারেটেড হয়েছে</p>
+            <p>© ২০২৫ কিশোরকন্ঠ ফাউন্ডেশন - রাজশাহী জেলা পশ্চিম</p>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

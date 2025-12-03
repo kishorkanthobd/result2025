@@ -1,0 +1,609 @@
+@import url('https://fonts.maateen.me/solaiman-lipi/font.css');
+
+* {
+    font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+}
+
+body {
+    font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.header-bg {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+}
+.card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+.btn-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+}
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 14px rgba(59, 130, 246, 0.3);
+}
+.input-field {
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+}
+.input-field:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    outline: none;
+}
+.input-field.error {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+.result-card {
+    background: #ffffff;
+    color: white;
+    border-radius: 12px;
+    padding: 24px;
+}
+.merit-badge {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: white;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-weight: bold;
+    display: inline-block;
+}
+.student-info {
+    text-align: left !important;
+}
+select {
+    font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+}
+button {
+    font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+}
+.alert-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #ef4444;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    animation: slideIn 0.3s ease;
+    font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.header-logo {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    object-position: left;
+    margin-top: -57px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.header-text {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .header-logo {
+        height: 60px;
+        margin-bottom: 10px;
+        margin-top: 0;
+    }
+}
+
+.print-logo {
+    height: 50px;
+    object-fit: contain;
+    object-position: left;
+}
+
+@media print {
+    @import url('https://fonts.maateen.me/solaiman-lipi/font.css');
+    
+    * {
+        font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+    }
+    
+    body, html {
+        background: white !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+    }
+    
+    body * {
+        visibility: hidden;
+        font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+    }
+    
+    #printable-section, 
+    #printable-section *,
+    .print-header,
+    .print-header *,
+    .print-footer,
+    .print-footer * {
+        visibility: visible !important;
+        font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+    }
+    
+    #printable-section {
+        position: absolute !important;
+        left: 0 !important;
+        top: 80px !important;
+        width: 100% !important;
+        background: white !important;
+        color: black !important;
+        box-shadow: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+    }
+    
+    #printable-section * {
+        color: black !important;
+        background: white !important;
+        font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+    }
+    
+    .no-print {
+        display: none !important;
+    }
+    
+    .print-header {
+        display: block !important;
+        text-align: center;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #1e3a8a;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: white !important;
+        padding: 15px 0;
+        color: black !important;
+        font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+    }
+    
+    .print-footer {
+        display: block !important;
+        text-align: center;
+        margin-top: 20px;
+        padding-top: 15px;
+        border-top: 1px solid #ccc;
+        font-size: 12px;
+        color: #666 !important;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: white !important;
+        padding: 10px 0;
+        font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+    }
+    
+    .congratulations-container {
+        display: block !important;
+        visibility: visible !important;
+        background: white !important;
+        color: black !important;
+        border: 1px solid #ddd !important;
+        border-radius: 12px;
+        padding: 24px;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        box-shadow: none !important;
+        font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+    }
+    
+    .congratulations-container::before {
+        display: none !important;
+    }
+    
+    .congratulations-container * {
+        color: black !important;
+        visibility: visible !important;
+        background: transparent !important;
+        font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+    }
+    
+    .confetti {
+        display: none !important;
+    }
+    
+    .info-box1, .marks-box {
+        background: white !important;
+        border: 1px solid #ddd !important;
+        color: black !important;
+        font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+    }
+    
+    .info-box1 h3, .marks-box h3 {
+        color: black !important;
+        font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+    }
+    
+    .marks-value {
+        color: black !important;
+        font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+    }
+    
+    .info-item {
+        color: black !important;
+        border-bottom: 1px solid #eee !important;
+        font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+    }
+}
+
+.print-header, .print-footer {
+    display: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    position: relative;
+    font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    z-index: 1001;
+    font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+}
+
+.close-btn:hover {
+    color: black;
+}
+
+#preview-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+#preview-container img {
+    max-width: 100%;
+    max-height: 350px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    object-fit: contain;
+}
+
+.print-capture-container {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+}
+
+.print-capture-header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #1e3a8a;
+    font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+}
+
+.print-capture-footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #ccc;
+    font-size: 12px;
+    color: #666;
+    font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+}
+
+.preview-result-card {
+    background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+    color: white;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 20px 0;
+    font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+}
+
+.congratulations-container {
+    background: linear-gradient(135deg, #f59e0b 0%, #eab308 50%, #f59e0b 100%);
+    color: white;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(245, 158, 11, 0.3);
+    position: relative;
+    overflow: hidden;
+    font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+}
+
+.congratulations-container::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+    transform: rotate(30deg);
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #f0f;
+    opacity: 0.7;
+    animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(500px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.marks-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .marks-container {
+        flex-direction: row;
+    }
+}
+
+.marks-box {
+    background-color: #F0FDF4;
+    border-radius: 12px;
+    padding: 20px;
+    border-width: 1px 1px 1px 4px;
+    border-style: solid;
+    border-color: #10B981;
+    width: 100%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+}
+
+.marks-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(16, 185, 129, 0.3);
+}
+
+.marks-box h3 {
+    color: rgb(45, 172, 91);
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+}
+
+.marks-value {
+    color: rgb(22 128 61);
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+}
+
+.student-details-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .student-details-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.info-box1 {
+    background-color: rgb(254 242 242);
+    border-radius: 12px;
+    padding: 20px;
+    border-width: 1px 1px 1px 4px;
+    border-style: solid;
+    border-color: rgb(220 38 38);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+}
+
+.info-box1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(220, 38, 38, 0.3);
+}
+
+.info-box1 h3 {
+    color: rgb(220 38 38);
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+}
+
+.info-item {
+    color: rgb(7 89 133);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    gap: 16px;
+    font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+}
+
+.info-item:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.info-label {
+    font-weight: 600;
+    flex: 0 0 30%;
+    color: inherit;
+    text-align: left;
+    font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+}
+
+.info-value {
+    flex: 1;
+    text-align: left;
+    color: inherit;
+    line-height: 1.5;
+    word-wrap: break-word;
+    font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+}
+
+#search-btn {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+}
+
+#search-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+}
+
+#search-btn:active {
+    transform: translateY(-1px);
+}
+
+#search-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+#search-btn:focus:not(:active)::after {
+    animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(20, 20);
+        opacity: 0;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+}
+
+p, span, div, a, li {
+    font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+}
+
+input, textarea, select {
+    font-family: 'Solaiman Lipi', 'SolaimanLipi', 'Noto Sans Bengali', sans-serif !important;
+}
